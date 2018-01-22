@@ -27,12 +27,14 @@ html{
 }
 
 .header_background_box{
+  display: flex;
   height: 25rem;
   font-size: 2rem;
-  display: flex;
   background-image: url("../images/moto.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom;
+  justify-content: flex-start;
 }
 
 .header_text_box{
@@ -40,9 +42,11 @@ html{
   font-size: 2rem;
   font-weight: bold;
   text-align: left;
-  padding-left: 3rem;
   width: 20rem;
-  margin: auto;
+  margin-top: 9rem;
+  margin-left: 6rem;
+  padding-left: 3rem;
+  margin-bottom: 4rem;
 }
 
 .header_text_box p{
@@ -50,15 +54,15 @@ html{
   padding-bottom: 0.25rem;
 }
 
-.header_text_box h1{
-  padding-bottom: 2rem;
-}
-
 .main_navbar{
+  display: inline-flex;
   width: 100%;
   background-color: red;
-  display: inline-flex;
   justify-content: center;
+}
+
+.mobile_nav{
+  display: none;
 }
 
 .main_navbar p{
@@ -68,7 +72,13 @@ html{
 .store_items_box{
   margin-top: 3rem;
   display: flex;
-  width: 100%;
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mobile_store_items_box{
+  display: none;
 }
 
 .store_item{
@@ -103,7 +113,7 @@ html{
 
 .location_hour_item{
   align-content: center;
-  text-align: center;
+  text-align: left;
   width: 35%;
   background-color: black;
 }
@@ -116,6 +126,7 @@ html{
 
 .location_hour_item .info{
   color: black;
+  text-align: left;
 }
 
 .info{
@@ -128,7 +139,6 @@ footer{
   text-align: left;
   background-color: black;
   align-items:center;
-  justify-content: center;
 }
 
 .copyright_info{
@@ -138,4 +148,79 @@ footer{
 
 div{
   border: solid 1px white;
+}
+
+@media only screen and (max-width:1024px){
+  .main_navbar{
+    display: none;
+  }
+
+  .header_text_box{
+    font-size: 1.5rem;
+    margin-top: 7rem;
+    margin-left: 4rem;
+    padding-left: 1rem;
+    padding-bottom: 3rem;
+    margin-bottom: auto;
+  }
+
+  .mobile_nav{
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    margin: auto;
+  }
+
+  .mobile_nav p{
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .store_items_box{
+    display: none;
+  }
+
+  .mobile_store_items_box{
+    display: flex;
+    margin-top: 3rem;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .mobile_store_item{
+    width: 47%;
+    border: solid 4px black;
+  }
+
+  .mobile_store_item img{
+    height: 9rem;
+  }
+
+  .location_hour_box{
+    justify-content: space-between;
+  }
+
+}
+
+@media only screen and (max-width:470px){
+
+  .header_background_box{
+    height: 15rem;
+  }
+
+  .header_text_box{
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .header_text_box p{
+    padding-top: 1rem;
+    padding-left: 2rem;
+  }
+
+  .header_text_box h1{
+    padding-left: 2rem;
+  }
+
 }
